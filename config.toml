@@ -45,7 +45,7 @@ googleAnalytics = ""
     description = "Open Arms Ministry supports and partners with those struggling with homelessness, poverty, and food insecurity to enhance human dignity, community, and opportunity."
     buttonText = "next"
     # the picture is storead at static/images/
-    picture = "wall-panhandling.jpg"
+    # picture = "wall-panhandling.jpg"
 
   # skill section
   [params.skill_list]
@@ -54,7 +54,7 @@ googleAnalytics = ""
     description = "We provide various services through our Food Pantry and Drop-in Center"
     buttonText = "next"
     # the picture is storead at static/images/
-    picture = "pic02.jpg"
+    # picture = "pic02.jpg"
 
     [[params.skills]]
       icon = "fa-cutlery"
@@ -77,7 +77,7 @@ googleAnalytics = ""
     title = "One more thing"
     description = "We are currently in the development stage, aiming to provide the best services while being good neighbors in the community.  If you are interested in volunteering, donating, or providing any feedback, please don't hesistate to contact us below!"
     # the picture is storead at static/images/
-    picture = "pic03.jpg"
+    # picture = "pic03.jpg"
 
   # footer section
   # this section includes
