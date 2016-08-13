@@ -30,12 +30,12 @@ googleAnalytics = "UA-82352339-1"
   # - send a dummy email to yourself to confirm your account
   # - click the confirmation link in the email from www.formspree.io
   # - That's all. Enjoy mailing!
-  email = "howlowck@gmail.com"
+  email = "feedback@openarmsministry.org"
 
   # Hero Section
   [params.hero]
     title = "Open Arms Ministry"
-    description = "We are a non-profit 501c3 organization located in Logan Square Chicago, aiming to provide essential services to the needy."
+    description = "We are a non-profit 501c3 organization located in Logan Square Chicago, aiming to provide essential services to the individuals and families."
     buttonText = "Learn more"
 
   # about section
