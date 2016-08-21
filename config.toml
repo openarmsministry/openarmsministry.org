@@ -75,7 +75,7 @@ googleAnalytics = "UA-82352339-1"
   [params.infos]
     enable = true
     title = "One more thing"
-    description = "We are currently in the development stage, aiming to provide the best services while being good neighbors in the community.  If you are interested in volunteering, donating, or providing any feedback, please don't hesistate to contact us below!"
+    description = "We are currently in the development stage, aiming to provide the best services while being good neighbors in the community.  If you are interested in volunteering, donating, or providing any feedback, please don't hesistate to contact us below! <br> Also, if you would like a reimbursement, please <a href='https://docs.google.com/forms/d/e/1FAIpQLScr-bNjWi7JTC-f5x2ClTTYJ8cO3SjpWwp9C3oPe_0e6GmNiQ/viewform'>follow the instruction here</a>."
     # the picture is storead at static/images/
     # picture = "pic03.jpg"
 
