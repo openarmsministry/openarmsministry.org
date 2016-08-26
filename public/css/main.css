@@ -1480,6 +1480,25 @@
 	.align-right {
 		text-align: right;
 	}
+/* Message */
+.message.hidden{
+	display: none;
+}
+.message {
+	padding: 10px;
+	width: 100%;
+}
+.message.success {
+	background-color: #DFF2BF;
+	border: solid 1px #4F8A10;
+	color: #4F8A10;
+}
+
+.message.error {
+	background-color: #FFBABA;
+	color: #D8000C;
+	border: solid 1px #D8000C;
+}
 
 /* Loader */
 
@@ -1936,7 +1955,7 @@
 		display: block;
 		font-size: 0.9em;
 		font-weight: 700;
-		margin: 0 0 1em 0;
+		margin: 1em 0 0 0;
 	}
 
 	input[type="text"],

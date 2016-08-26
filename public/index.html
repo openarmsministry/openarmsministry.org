@@ -13,18 +13,28 @@
 <meta name="description" content="">
 <meta name="author" content=" Open Arms Ministry Chicago ">
 <meta name="generator" content="Hugo 0.16" />
-<!-- [if lte IE 8 ]]> <script src="https://openarmsministry.org/js/ie/html5shiv.js"></script><![endif] -->
-<link rel="stylesheet" href="https://openarmsministry.org/css/main.css" />
-<!--[if lte IE 8]><link rel="stylesheet" href="https://openarmsministry.org/css/ie8.css" /><![endif]-->
-<!--[if lte IE 8]><link rel="stylesheet" href="https://openarmsministry.org/css/ie9.css" /><![endif]-->
+<script src="https://openarmsministry.orgjs/jquery.min.js"></script>
+<script src="https://openarmsministry.orgjs/card-js.min.js"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+  Stripe.setPublishableKey('pk_test_4EyldUsSlF1XNcXNadhdHCWf');
+</script>
+<!-- [if lte IE 8 ]]> <script src="https://openarmsministry.orgjs/ie/html5shiv.js"></script><![endif] -->
+<link rel="stylesheet" href="https://openarmsministry.orgcss/jquery.modal.min.css" title="no title" charset="utf-8">
+<link rel="stylesheet" href="https://openarmsministry.orgcss/main.css" />
+<link rel="stylesheet" href="https://openarmsministry.orgcss/card-js.min.css">
+<!--[if lte IE 8]><link rel="stylesheet" href="https://openarmsministry.orgcss/ie8.css" /><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="https://openarmsministry.orgcss/ie9.css" /><![endif]-->
 
 	</head>
 	<body>
+		<div class="modal-backdrop" style="display:none; position:fixed; top:0; bottom:0; width: 100%; height:100%; z-index: 800; background: rgba(0,0,0,0.7);"></div>
 		<!-- Hero -->
 <section id="header">
   <header class="major 1">
-    <h1> Open Arms Ministry </h1>
-    <p> We are a non-profit 501c3 organization located in Logan Square Chicago, aiming to provide essential services to the individuals and families. </p>
+    <img style="width: 250px;" src="images/logo.png" alt="">
+    
+    <p > We are a non-profit 501c3 organization located in Logan Square Chicago, aiming to provide essential services to the individuals and families. </p>
   </header>
   <div class="container">
     <ul class="actions">
@@ -33,13 +43,13 @@
   </div>
 </section>
 
-
+		
 		
 			
 <!-- about -->
   <section id="about" class="main special">
     <div class="container">
-      <span class="image fit primary"><img src="images/ " alt="" /></span>
+      
       <div class="content">
         <header class="major">
           <h2>Who We Are</h2>
@@ -56,7 +66,7 @@
 			<!-- Services -->
   <section id="skills" class="main special">
     <div class="container">
-      <span class="image fit primary"><img src="images/" alt="" /></span>
+      
       <div class="content">
         <header class="major">
           <h2>Service We Provide</h2>
@@ -96,19 +106,174 @@
 			<!-- Infos -->
   <section id="infos" class="main special">
     <div class="container">
-      <span class="image fit primary"><img src="images/" alt="" /></span>
+      
       <div class="content">
         <header class="major">
           <h2>One more thing</h2>
         </header>
         <p>We are currently in the development stage, aiming to provide the best services while being good neighbors in the community.  If you are interested in volunteering, donating, or providing any feedback, please don&rsquo;t hesistate to contact us below! <br> Also, if you would like a reimbursement, please <a href='https://docs.google.com/forms/d/e/1FAIpQLScr-bNjWi7JTC-f5x2ClTTYJ8cO3SjpWwp9C3oPe_0e6GmNiQ/viewform'>follow the instruction here</a>.</p>
       </div>
-      <a href="#footer" class="goto-next scrolly"></a>
+      <a href="#donate" class="goto-next scrolly"></a>
     </div>
   </section>
 
 		
+		
+		  <!-- Donate -->
+  <section id="donate" class="main special">
+    <div class="container">
+      <div class="content">
+        <header class="major">
+          <h2>Donate</h2>
+        </header>
+        <p>We would love for you to contribute to our mission of enhancing human diginity and providing food and essential services for people in Chicago. (Feature goes live on 8/28/2016)</p>
+        <form class="modal" action="" method="post" id="donation-form" style="display:none; min-width:200px; position: fixed; z-index: 9999; top: 30px; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+          <div class="message hidden"></div>
+          <label for="name">Your Name</label>
+          <input type="text" name="name" value="" required>
+          <label for="email">Your Email</label>
+          <input type="email" name="email" value="" required placeholder="Email">
+          <label for="">Your Credit Card Information</label>
+          <div class="card-js" data-stripe="true"></div>
+          <label for="amount">Donation Amount</label>
+          <span>$</span> <input type="tel" name="amount" value="" required>
+          <input style="margin-top: 20px" type="submit" class="submit" value="Submit Donation">
 
+          <a href="#close-modal" class="close-modal ">Close</a>
+        </form>
+        <a id="donate-modal" href="#donation-form" class="button">Donate!</a>
+      </div>
+      <a href="#footer" class="goto-next scrolly"></a>
+    </div>
+  </section>
+  
+<script type="text/javascript">
+  $(function() {
+    function removeCardInfo($form) {
+      $form.find('.card-number').val('');
+      $form.find('.expiry').val('');
+      $form.find('.cvc').val('');
+    }
+
+    function showMessage($message) {
+      $message.removeClass('hidden');
+    }
+
+    function hideMessage($message) {
+      $message.addClass('hidden');
+    }
+
+    function displayMessage(message, $form, status) {
+      if (typeof status === 'undefined') {
+        status = 'success'
+      }
+      $message = $form.find('.message');
+      $message.removeClass('success');
+      $message.removeClass('error');
+
+      if (status == 'success') {
+        $message.addClass('success');
+      } else {
+        $message.addClass('error');
+      }
+
+      $message.text(message);
+      showMessage($message);
+    }
+    
+    function stripeResponseHandler(status, response) {
+      
+      console.log(status);
+      var $form = $('#donation-form');
+
+      if (response.error) { 
+        
+        $form.find('.payment-errors').text(response.error.message);
+        $form.find('.submit').prop('disabled', false); 
+        displayMessage('Please double check your credit card information.', $form, 'error');
+
+      } else { 
+        
+        var token = response.id;
+        
+        $form.append($('<input type="hidden" name="stripeToken">').val(token));
+        console.log(token);
+        var name = $form.find('[name="name"]').val();
+        var email = $form.find('[name="email"]').val();
+        var amount = $form.find('[name="amount"]').val();
+        $.ajax({
+          url: "https://donate.openarmsministry.org/api/payment",
+          method: "POST",
+          data: {
+            name: name,
+            token: token,
+            email: email,
+            amount: amount
+          }
+        }).success(function (data, statusText) {
+          $form[0].reset();
+          displayMessage('Thank you! Donation Submitted. Please check your inbox.', $form)
+        }).error(function (data, statusText) {
+          console.log(data);
+          displayMessage('We are sorry. Something went wrong. Please go to donate.openarmsministry.org to complete your donation.', $form, 'error');
+        }).done(function () {
+          removeCardInfo($form);
+          enableSubmitButton($form.find('.submit'));
+        })
+
+      }
+    };
+    
+    function hideDonateModal (event) {
+      event.preventDefault();
+      $('#donation-form').css({
+        display: 'none'
+      });
+      $('.modal-backdrop').css({
+        display: 'none'
+      });
+    }
+    
+    function showDonateModal (event) {
+      event.preventDefault();
+      $('#donation-form').css({
+        display: 'block'
+      });
+      $('.modal-backdrop').css({
+        display: 'block'
+      });
+    }
+    
+    function enableSubmitButton($button) {
+      $button.prop('disable', false);
+      $button.val('Submit Donation');
+    }
+    
+    function disableSubmitButton($button) {
+      $button.prop('disabled', true);
+      $button.val('Please Wait');
+    }
+    
+    $('#donate-modal').click(showDonateModal);
+    $('.close-modal').click(hideDonateModal);
+    $('.modal-backdrop').click(hideDonateModal);
+    
+    var $form = $('#donation-form');
+    $form.submit(function(event) {
+      event.preventDefault();
+      
+      disableSubmitButton($form.find('.submit'));
+    
+      
+      Stripe.card.createToken($form, stripeResponseHandler);
+      
+      
+      return false;
+    });
+  });
+</script>
+
+		
 		
 
 			<!-- Footer -->
@@ -137,15 +302,16 @@
 					
 			  </section>
 		
+		
 
 		<!-- Scripts -->
-  <script src="https://openarmsministry.org/js/jquery.min.js"></script>
-  <script src="https://openarmsministry.org/js/jquery.scrollex.min.js"></script>
-  <script src="https://openarmsministry.org/js/jquery.scrolly.min.js"></script>
-  <script src="https://openarmsministry.org/js/skel.min.js"></script>
-  <script src="https://openarmsministry.org/js/util.js"></script>
-  <!-- [if lte IE 8 ]]> <script src="https://openarmsministry.org/js/ie/respond.min.js"></script><![endif] -->
-  <script src="https://openarmsministry.org/js/main.js"></script>
+  <script src="https://openarmsministry.orgjs/jquery.scrollex.min.js"></script>
+  <script src="https://openarmsministry.orgjs/jquery.scrolly.min.js"></script>
+  <script src="https://openarmsministry.orgjs/jquery.modal.min.js"></script>
+  <script src="https://openarmsministry.orgjs/skel.min.js"></script>
+  <script src="https://openarmsministry.orgjs/util.js"></script>
+  <!-- [if lte IE 8 ]]> <script src="https://openarmsministry.orgjs/ie/respond.min.js"></script><![endif] -->
+  <script src="https://openarmsministry.orgjs/main.js"></script>
   
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

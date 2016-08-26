@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "https://openarmsministry.org/"
+baseurl = "https://openarmsministry.org"
 languageCode = "en-us"
 title = "Highlights"
 theme = "hugo-highlights-theme"
@@ -31,9 +31,13 @@ googleAnalytics = "UA-82352339-1"
   # - click the confirmation link in the email from www.formspree.io
   # - That's all. Enjoy mailing!
   email = "feedback@openarmsministry.org"
-
+  
+  stripeKey = "pk_test_4EyldUsSlF1XNcXNadhdHCWf"
+  # stripeKey = "pk_live_37kWx8MUQw8vfC9hO1sVU2qr"
+  
   # Hero Section
   [params.hero]
+    logo = "logo.png"
     title = "Open Arms Ministry"
     description = "We are a non-profit 501c3 organization located in Logan Square Chicago, aiming to provide essential services to the individuals and families."
     buttonText = "Learn more"
@@ -79,6 +83,10 @@ googleAnalytics = "UA-82352339-1"
     # the picture is storead at static/images/
     # picture = "pic03.jpg"
 
+  [params.donate]
+    enable = true
+    title = "Donate"
+    description = "We would love for you to contribute to our mission of enhancing human diginity and providing food and essential services for people in Chicago. (Feature goes live on 8/28/2016)"
   # footer section
   # this section includes
   #
