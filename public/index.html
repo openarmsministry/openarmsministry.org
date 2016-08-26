@@ -9,7 +9,8 @@
 		<title>Highlights</title>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0,maximum-scale=1.0" />
+
 <meta name="description" content="">
 <meta name="author" content=" Open Arms Ministry Chicago ">
 <meta name="generator" content="Hugo 0.16" />
@@ -28,7 +29,7 @@
 
 	</head>
 	<body>
-		<div class="modal-backdrop" style="display:none; position:fixed; top:0; bottom:0; width: 100%; height:100%; z-index: 800; background: rgba(0,0,0,0.7);"></div>
+		<div class="modal-backdrop" style="display:none; top:0; bottom:0; width: 100%; height:100%; z-index: 800; background: rgba(0,0,0,0.7);"></div>
 		<!-- Hero -->
 <section id="header">
   <header class="major 1">
@@ -127,7 +128,8 @@
           <h2>Donate</h2>
         </header>
         <p>We would love for you to contribute to our mission of enhancing human diginity and providing food and essential services for people in Chicago. (Feature goes live on 8/28/2016)</p>
-        <form class="modal" action="" method="post" id="donation-form" style="display:none; min-width:200px; position: fixed; z-index: 9999; top: 30px; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+        
+        <form action="" method="post" id="donation-form" style="display:none; ">
           <div class="message hidden"></div>
           <label for="name">Your Name</label>
           <input type="text" name="name" value="" required>
@@ -137,9 +139,10 @@
           <div class="card-js" data-stripe="true"></div>
           <label for="amount">Donation Amount</label>
           <span>$</span> <input type="tel" name="amount" value="" required>
+          <br>
           <input style="margin-top: 20px" type="submit" class="submit" value="Submit Donation">
 
-          <a href="#close-modal" class="close-modal ">Close</a>
+          
         </form>
         <a id="donate-modal" href="#donation-form" class="button">Donate!</a>
       </div>
@@ -227,21 +230,26 @@
     function hideDonateModal (event) {
       event.preventDefault();
       $('#donation-form').css({
-        display: 'none'
+        
       });
-      $('.modal-backdrop').css({
-        display: 'none'
-      });
+      
+      
+      
     }
     
     function showDonateModal (event) {
       event.preventDefault();
       $('#donation-form').css({
-        display: 'block'
+        display: 'block',
+        
       });
-      $('.modal-backdrop').css({
-        display: 'block'
-      });
+      $('#donate-modal').css({
+        display: 'none'
+      })
+      
+      
+      
+      
     }
     
     function enableSubmitButton($button) {

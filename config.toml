@@ -1,5 +1,6 @@
 # Site settings
 baseurl = "https://openarmsministry.org/"
+# baseurl = "http://b48cd5d2.ngrok.io/"
 languageCode = "en-us"
 title = "Highlights"
 theme = "hugo-highlights-theme"
