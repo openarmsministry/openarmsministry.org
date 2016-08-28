@@ -33,9 +33,17 @@ googleAnalytics = "UA-82352339-1"
   # - That's all. Enjoy mailing!
   email = "feedback@openarmsministry.org"
   
-  stripeKey = "pk_test_4EyldUsSlF1XNcXNadhdHCWf"
-  # stripeKey = "pk_live_37kWx8MUQw8vfC9hO1sVU2qr"
+  # stripeKey = "pk_test_4EyldUsSlF1XNcXNadhdHCWf"
+  stripeKey = "pk_live_37kWx8MUQw8vfC9hO1sVU2qr"
+  [params.volunteer]
+    enable = true
+    title = "Volunteer"
+    description = "We would love for you to volunteer with us! <br> Please fill [this form](http://bit.ly/OAMvolunteer) out: and we will be in touch."
   
+  [params.program]
+    enable = true
+    title = "Program Hours"
+    description = "<h4> Drop-in Program </h4> Tuesday to Thursday <br> 10am-2pm <br> <br> <h4>Food Pantry</h4> Wednesday <br> 4pm-6pm"
   # Hero Section
   [params.hero]
     logo = "logo.png"
@@ -80,7 +88,7 @@ googleAnalytics = "UA-82352339-1"
   [params.infos]
     enable = true
     title = "One more thing"
-    description = "We are currently in the development stage, aiming to provide the best services while being good neighbors in the community.  If you are interested in volunteering, donating, or providing any feedback, please don't hesistate to contact us below! <br> Also, if you would like a reimbursement, please <a href='https://docs.google.com/forms/d/e/1FAIpQLScr-bNjWi7JTC-f5x2ClTTYJ8cO3SjpWwp9C3oPe_0e6GmNiQ/viewform'>follow the instruction here</a>."
+    description = "We are currently in the development stage, aiming to provide the best services while being good neighbors in the community.  If you are interested in volunteering, donating, or providing any feedback, please don't hesistate to contact us below!"
     # the picture is storead at static/images/
     # picture = "pic03.jpg"
 
