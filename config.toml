@@ -2,7 +2,7 @@
 baseurl = "https://openarmsministry.org/"
 # baseurl = "http://b48cd5d2.ngrok.io/"
 languageCode = "en-us"
-title = "Highlights"
+title = "Open Arms Ministry"
 theme = "hugo-highlights-theme"
 
 # Enter your tracking code to enable Google analytics
@@ -95,7 +95,7 @@ googleAnalytics = "UA-82352339-1"
   [params.donate]
     enable = true
     title = "Donate"
-    description = "We would love for you to contribute to our mission of enhancing human diginity and providing food and essential services for people in Chicago. (Feature goes live on 8/28/2016)"
+    description = "We would love for you to contribute to our mission of enhancing human diginity and providing food and essential services for people in Chicago."
   # footer section
   # this section includes
   #
@@ -103,7 +103,13 @@ googleAnalytics = "UA-82352339-1"
   # - social icons
   #
   # It's possible to disable the whole footer or disable only social icons or contact form
-
+  [params.subscribe]
+    enable = true
+    title = "Subscribe to our Newletter"
+    description = "We are excited to share with you what we are working on.  If you are interested, please follow the link below and subscribe to our newsletter."
+    buttonText = "Subscribe"
+    link = "http://eepurl.com/cjtmJv"
+    
   [params.footer]
     enable = true
     title = "Get in Touch"
