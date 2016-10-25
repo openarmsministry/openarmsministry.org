@@ -96,6 +96,7 @@ googleAnalytics = "UA-82352339-1"
     enable = true
     title = "Donate"
     description = "We would love for you to contribute to our mission of enhancing human diginity and providing food and essential services for people in Chicago."
+    buttonLink= "https://donate.openarmsministry.org"
   # footer section
   # this section includes
   #
