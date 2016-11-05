@@ -38,24 +38,24 @@ googleAnalytics = "UA-82352339-1"
   [params.volunteer]
     enable = true
     title = "Volunteer"
-    description = "We would love for you to volunteer with us! <br> Please fill [this form](http://bit.ly/OAMvolunteer) out: and we will be in touch."
+    description = "Committed regular volunteers are needed in order for the Drop-In and Food Pantry to function effectively.  <br><br> We would love for you to volunteer with us! <br> Please fill [this form](http://bit.ly/OAMvolunteer) out: and we will be in touch."
   
   [params.program]
     enable = true
-    title = "Program Hours"
-    description = "<h4> Drop-in Program </h4> Tuesday to Thursday <br> 10am-2pm <br> <br> <h4>Food Pantry</h4> Wednesday <br> 4pm-6pm"
+    title = "Program Hours/Info"
+    description = "<h4> Drop-In </h4> Tuesday to Thursday <br> 10am-2pm <br> <a href='tel:7732523210'>773-252-3210</a> <br> <a href='mailto:dropin@openarmsministry.org'>dropin@openarmsministry.org</a> <br>  <br> <h4>Food Pantry</h4> Wednesday <br> 4pm-6pm <br> <a href='mailto:pantry@openarmsministry.org'>pantry@openarmsministry.org</a>"
   # Hero Section
   [params.hero]
     logo = "logo.png"
     title = "Open Arms Ministry"
-    description = "We are a non-profit 501c3 organization located in Logan Square Chicago, aiming to provide essential services to the individuals and families."
+    description = "Share. Connect. Provide."
     buttonText = "Learn more"
 
   # about section
   [params.about]
     enable = true
     title = "Who We Are"
-    description = "Open Arms Ministry supports and partners with those struggling with homelessness, poverty, and food insecurity to enhance human dignity, community, and opportunity."
+    description = "Open Arms Ministry supports and partners with those struggling with homelessness, poverty, and food insecurity to enhance human dignity, community, and opportunity. <br><br> Open Arms Ministry is a 501&#40;c&#41;3 organization."
     buttonText = "next"
     # the picture is storead at static/images/
     # picture = "wall-panhandling.jpg"
@@ -63,27 +63,22 @@ googleAnalytics = "UA-82352339-1"
   # skill section
   [params.skill_list]
     enable = true
-    title = "Service We Provide"
-    description = "We provide various services through our Food Pantry and Drop-in Center"
+    title = "Services We Provide"
+    description = "Open Arms Ministry has two programs addressing homelessness, poverty, and food insecurity on the northwest side of Chicago."
     buttonText = "next"
     # the picture is storead at static/images/
     # picture = "pic02.jpg"
 
     [[params.skills]]
-      icon = "fa-cutlery"
-      title = "Food for Families"
-
-    [[params.skills]]
       icon = "fa-child"
-      title = "Fresh Clothing"
-
+      title = "Drop-In"
+      description = "Open Arms Drop-In provides basic relief services to individuals struggling with homelessness or at risk of becoming homeless. More than relief from the weather outside, this drop-in program enables those who come to share a meal with friends and get connected to resources. <br><br> Guests also receive help meeting physical needs like clothing, toiletries, and basic healthcare. Referrals are available for services such as overnight shelter, recovery, and education."
+    
     [[params.skills]]
-      icon = "fa-comments-o"
-      title = "Community"
+      icon = "fa-cutlery"
+      title = "Food Pantry"
+      description = "Working in conjunction with the Greater Chicago Food Depository, the Open Arms Food Pantry serves families and individuals who live in the area bounded by **Irving Park, Fullerton, Pulaski, and Western**. <br></br>All are welcome (proof of address required), including those who have experienced job loss, illness in the family, unexpected expenses, and more."
 
-    [[params.skills]]
-      icon = "fa-coffee"
-      title = "Light Refreshments and Lunch"
   # infos section
   [params.infos]
     enable = true
@@ -95,8 +90,9 @@ googleAnalytics = "UA-82352339-1"
   [params.donate]
     enable = true
     title = "Donate"
-    description = "We would love for you to contribute to our mission of enhancing human diginity and providing food and essential services for people in Chicago."
+    description = "We would love for you to contribute to our mission of enhancing human diginity and providing food and essential services for people in Chicago. <br> <br> Open Arms Ministry is a 501&#40;c&#41;3 non-profit organization; donations are tax-deductible."
     buttonLink= "https://donate.openarmsministry.org"
+    buttonText= "Donate Platform"
   # footer section
   # this section includes
   #
@@ -106,7 +102,7 @@ googleAnalytics = "UA-82352339-1"
   # It's possible to disable the whole footer or disable only social icons or contact form
   [params.subscribe]
     enable = true
-    title = "Subscribe to our Newletter"
+    title = "Subscribe to our Newsletter"
     description = "We are excited to share with you what we are working on.  If you are interested, please follow the link below and subscribe to our newsletter."
     buttonText = "Subscribe"
     link = "http://eepurl.com/cjtmJv"
@@ -127,27 +123,12 @@ googleAnalytics = "UA-82352339-1"
 
     # social icons
     [params.footer.social_list]
-      enable = false
-
-      [[params.footer.social]]
-        title = "Twitter"
-        icon = "fa-twitter"
-        link = "#"
+      enable = true
 
       [[params.footer.social]]
         title = "Facebook"
         icon = "fa-facebook"
-        link = "#"
-
-      [[params.footer.social]]
-        title = "Instagram"
-        icon = "fa-instagram"
-        link = "#"
-
-      [[params.footer.social]]
-        title = "Email"
-        icon = "fa-envelope"
-        link = "#"
+        link = "https://www.facebook.com/openarmschicago"
 
     # copyright
     #[params.footer.copyright.notice]
