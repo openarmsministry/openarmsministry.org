@@ -33,8 +33,6 @@ googleAnalytics = "UA-82352339-1"
   # - That's all. Enjoy mailing!
   email = "feedback@openarmsministry.org"
   
-  # stripeKey = "pk_test_4EyldUsSlF1XNcXNadhdHCWf"
-  stripeKey = "pk_live_37kWx8MUQw8vfC9hO1sVU2qr"
   [params.volunteer]
     enable = true
     title = "Volunteer"
@@ -43,7 +41,7 @@ googleAnalytics = "UA-82352339-1"
   [params.program]
     enable = true
     title = "Program Hours/Info"
-    description = "<h4> Drop-In </h4> Tuesday to Thursday <br> 10am-2pm <br> <a href='tel:7732523210'>773-252-3210</a> <br> <a href='mailto:dropin@openarmsministry.org'>dropin@openarmsministry.org</a> <br>  <br> <h4>Food Pantry</h4> Wednesday <br> 4pm-6pm <br> <a href='mailto:pantry@openarmsministry.org'>pantry@openarmsministry.org</a><br><br><h4>Location</h4>2649 N Francisco Ave.<br>Chicago, IL 60647"
+    description = "<h4> Drop-In </h4> Tuesday and Wednesday <br> 10am-2pm <br> <a href='tel:7732523210'>773-252-3210</a> <br> <a href='mailto:dropin@openarmsministry.org'>dropin@openarmsministry.org</a> <br>  <br> <h4>Food Pantry</h4> Wednesday <br> 4pm-6pm <br> <a href='mailto:pantry@openarmsministry.org'>pantry@openarmsministry.org</a><br><br><h4>Location</h4>2649 N Francisco Ave.<br>Chicago, IL 60647"
   # Hero Section
   [params.hero]
     logo = "logo.png"
