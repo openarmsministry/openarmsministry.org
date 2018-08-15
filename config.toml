@@ -36,7 +36,7 @@ googleAnalytics = "UA-82352339-1"
   [params.volunteer]
     enable = true
     title = "Volunteer"
-    description = "Committed regular volunteers are needed in order for the Drop-In and Food Pantry to function effectively.  <br><br> We would love for you to volunteer with us! <br> Please fill [this form](http://bit.ly/OAMvolunteer) out: and we will be in touch."
+    description = "Committed regular volunteers are needed in order for the Drop-In and Food Pantry to function effectively.  <br><br> We would love for you to volunteer with us! <br> Please fill [this form](http://bit.ly/oamvolunteer) out: and we will be in touch."
   
   [params.program]
     enable = true
