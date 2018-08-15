@@ -1,5 +1,9 @@
 # Open Arms Ministry Landing Page
 
+## Before you start with Development:
+The only software dependency to develop the open arms website is a tool called Hugo.  
+Please go to [the Hugo Download Page](https://gohugo.io/getting-started/installing/) and see how to install the tool before continuing.
+
 ## How to Develop:
 1. clone this repo.
 2. create a directory called `themes` in the clone repo's directory.
