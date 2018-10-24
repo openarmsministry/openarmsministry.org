@@ -48,6 +48,14 @@ googleAnalytics = "UA-82352339-1"
     title = "Open Arms Ministry"
     description = "Share. Connect. Provide."
     buttonText = "Learn more"
+  
+  # Call to Action
+  [params.cta]
+    enable = true
+    title = "Join the 100!"
+    description = "November 1st marks the start of our Drive for Five Campaign.<br><br>A donation of $150 will get you an <a href='https://www.storefrontier.com/church-in-the-wild-1'>Open Arms Ministry hoodie</a>.<br><br>A donation of $250 will get you an Open Arms Ministry hoodie and one donated in your name to someone in need.<br><br><b>Your $50 donation will help us reach our goal of $5000!</b>"
+    buttonText = "Help us reach 5000"
+    buttonLink = "https://secure.lglforms.com/form_engine/s/1-WiPfjS1CTLHROy0oDIgw"
 
   # about section
   [params.about]
@@ -80,8 +88,10 @@ googleAnalytics = "UA-82352339-1"
   # infos section
   [params.infos]
     enable = true
-    title = "One more thing"
-    description = "We are currently in the development stage, aiming to provide the best services while being good neighbors in the community.  If you are interested in volunteering, donating, or providing any feedback, please don't hesistate to contact us below!"
+    title = "Online Store"
+    description = "Open Arms Ministry now has an online shop! <br><br>Currently, we offer some beautifully designed tshirts and hoodies.<br><br>Check them out!"
+    buttonText = "See the shop"
+    buttonLink = "https://www.storefrontier.com/store/open-arms-ministry"
     # the picture is storead at static/images/
     # picture = "pic03.jpg"
 
@@ -90,7 +100,7 @@ googleAnalytics = "UA-82352339-1"
     title = "Donate"
     description = "We would love for you to contribute to our mission of enhancing human diginity and providing food and essential services for people in Chicago. <br> <br> Open Arms Ministry is a 501&#40;c&#41;3 non-profit organization; donations are tax-deductible."
     buttonLink= "https://donate.openarmsministry.org"
-    buttonText= "Donate Platform"
+    buttonText= "Donate Now"
   # footer section
   # this section includes
   #
